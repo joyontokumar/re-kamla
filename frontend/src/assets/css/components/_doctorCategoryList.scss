@@ -1,0 +1,39 @@
+.card-block-style {
+    .doctor-image-inner {
+        position: relative;
+        overflow: hidden;
+    }
+    .card-style-inner-content {
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.31);
+        padding: 20px 15px;
+        text-align: center;
+        .doctor-name {
+            font-size: 14px;
+            color: #3a3a3a;
+            padding-bottom: 5px;
+            position: relative;
+            transition: all 0.3s linear;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 2px;
+                height: 1px;
+                width: 40px;
+                background: #26339f;
+                transform: translateX(-50%);
+            }
+        }
+        .doctor-designation {
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.3s linear;
+            font-style: italic;
+        }
+    }
+    &:hover {
+        .doctor-name {
+            color: #26339f;
+        }
+    }
+}
