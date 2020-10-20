@@ -1,17 +1,30 @@
 // require model
-const doctor = require("../model/doctor");
+// const doctor = require("../model/doctor");
+const { json } = require("express");
+const Doctor = require("../model/doctor");
+// const faculty = require("../model/faculty");
 const Faculty = require("../model/faculty");
 
-// get all faculty 
-const getallFaculty = async (req, res) => {
-    res.send(await Faculty.find());
+// get all faculty
+const getallFaculty = async(req, res) =>{
+    res.send(await Faculty.find())
 }
+
+// faculty wise doctors lists show
+const getSingleFacultyDoctorLists = async (req, res) => {
+    const { id } = req.params;
+    Faculty.find()
+        .populate('doctors')
+        .then(faculty => {
+            res.send(faculty)
+        });
+};
 
 // create faculty 
 const createFacultyController = async (req, res) => {
-    const { name } = req.body;
+    console.log(req.body);
     const newFaculty = new Faculty({
-        name,
+        name: req.body.name
     })
     res.send(await newFaculty.save());
 }
@@ -38,4 +51,5 @@ module.exports = {
     createFacultyController,
     updateFacultyController,
     deleteFacultytroller,
+    getSingleFacultyDoctorLists
 }

@@ -15,11 +15,11 @@ const doctorSchema = new Schema({
         type: String,
         required: true
     },
-    faculty: [{
+    faculty: {
         type: Schema.Types.ObjectId,
         ref: 'Faculty',
         required: true
-    }]
+    }
 });
 
 module.exports = mongoose.model('Doctor', doctorSchema);
