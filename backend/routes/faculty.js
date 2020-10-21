@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 // all user controller require
 const facultyController = require('../controllers/facultyController');
-
-
 // all faculty routes
 router.get('/', facultyController.getallFaculty);
 router.post('/', facultyController.createFacultyController);

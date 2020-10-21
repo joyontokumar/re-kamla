@@ -1,0 +1,34 @@
+{
+    "teamMembers": [{
+            "avatar": "../assets/images/teams/1.jpg",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        },
+        {
+            "avatar": "../assets/images/teams/1.png",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        },
+        {
+            "avatar": "../assets/images/teams/2.jpg",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        },
+        {
+            "avatar": "../assets/images/teams/2.png",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        },
+        {
+            "avatar": "../assets/images/teams/3.jpg",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        },
+        {
+            "avatar": "../assets/images/teams/5.jpg",
+            "name": "Ahin Xian",
+            "designation": "Physiotherapy"
+        }
+
+    ]
+}

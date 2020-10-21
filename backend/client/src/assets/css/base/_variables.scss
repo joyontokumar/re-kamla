@@ -1,0 +1,40 @@
+$primary-color: #26339f;
+$primary-bg-color: #26339f;
+$secondary-color: #ef6d00;
+$secondary-bg-color: #ef6d00;
+$primary-font-size: 16px;
+$primary-font-weight: 400;
+$primary-font: 'Maven Pro',
+sans-serif;
+$primary-text-color: #3a3a3a;
+$primary-text-line-height: 32px;
+$primary-heading-text-color: #32322c;
+$white-text-color: #fff;
+$white-bg-color: #fff;
+$section-bg: #f8f9fa;
+// mixin
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -moz-transform: $property;
+}
+
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+//Breakpoins for responsive devices
+$bp-extra-large-desktop-max: 1500px;
+$bp-extra-large-desktop-min: 1200px;
+$bp-large-desktop-max: 1199px;
+$bp-large-desktop-min: 992px;
+$bp-medium-device-min: 768px;
+$bp-medium-device-max: 991px;
+$bp-landscape-device-max: 767px;
+$bp-landscape-device-min: 576px;
+$bp-extra-small-device-max: 575px;
+$bp-extra-small-device-min: 320px;

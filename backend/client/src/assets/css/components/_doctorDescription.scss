@@ -1,0 +1,52 @@
+.doctor-description-area {
+    .doctor-profile-wrapper {
+        position: relative;
+        padding: 15px;
+        overflow: hidden;
+        img {
+            border-radius: 50%;
+        }
+    }
+    .doctor-introduction {
+        h2.doctor-name {
+            background: #26339f;
+            display: inline-block;
+            color: #fff;
+            padding: 4px 20px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        .doctor-designation {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+        .doctor-social-link {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 15px;
+                    a {
+                        display: inline-block;
+                        padding: 5px;
+                        box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        text-align: center;
+                        color: rgba(0, 0, 0, .41);
+                        transition: all .3s linear;
+                        &:hover {
+                            background: #26339f;
+                            color: #fff;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

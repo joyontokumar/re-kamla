@@ -1,0 +1,24 @@
+.welcome-area {
+    position: relative;
+    height: 700px;
+    .slider-content {
+        .slider-inner-content {
+            .slider-title {
+                font-weight: 900;
+                margin: 0 auto;
+                max-width: 840px;
+                color: #ffffff;
+                line-height: 1;
+                font-size: 90px;
+            }
+            .slider-text {
+                color: #ffffff;
+                line-height: 1.5;
+                margin: 20px auto 30px;
+                max-width: 640px;
+                letter-spacing: 15px;
+                font-weight: 600;
+            }
+        }
+    }
+}
