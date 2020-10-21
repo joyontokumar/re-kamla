@@ -20,7 +20,7 @@ class Menu extends Component {
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav navbar-sidenav dashboard-bg" id="exampleAccordion">
                         <li className="nav-item">
-                            <Link to="" href="#" class="nav-link d-block text-center nav-admin-profile-area mb-5">
+                            <Link to="/dashboard"  class="nav-link d-block text-center nav-admin-profile-area mb-5">
                                 <div class="profile-image">
                                     <img class="img-sm rounded-circle" src={author} alt="profile image"/>
                                     </div>
