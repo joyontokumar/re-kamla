@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require("path");
 // add request
 const request = require('request');
 // require mongoose
@@ -29,9 +30,9 @@ const PORT = process.env.PORT || 5050;
     }
 })()
 // get all data
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.json({
-        body:"application start"
+        body: "application start"
     })
 })
 // all api routes
@@ -39,7 +40,8 @@ app.use('/api/faculty', facultyRoute);
 app.use('/api/doctor', doctorRoute);
 app.use('/api/subject', subjectRoute);
 app.use('/api/youtube', youtubeRoute);
-app.use('/api/document', documentRoute)
+app.use('/api/document', documentRoute);
+app.use('/image', express.static(path.join(__dirname, 'public')))
 app.listen(PORT, () => {
     console.log('server running');
 })

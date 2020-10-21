@@ -2,37 +2,14 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import { CanvasJSChart } from 'canvasjs-react-charts'
+import Card from '../IconCards/Card'
 class IconCards extends Component {
 
     render() {
-        const one ={
-            animationEnabled: true,
-            exportEnabled: true,
-            theme: "dark2",
-            title: {
-                text: "Doctors Categories"
-            },
-            data: [{
-                type: "pie",
-                indexLabel: "{label}: {y}%",
-                startAngle: -90,
-                dataPoints: [
-                    { y: 20, label: "Mental Health" },
-                    { y: 24, label: "Space and Language" },
-                    { y: 20, label: "Accomodation" },
-                    { y: 14, label: "Phyotherapist" },
-                    { y: 12, label: "Clinical Psychotherepist" },
-                    { y: 10, label: "Occupotional Therepist" }
-                ]
-            }]
-        }
-        const two = {
+        const option = {
             animationEnabled: true,
             exportEnabled: true,
             theme: "light2", //"light1", "dark1", "dark2"
-            title: {
-                text: "Faculty"
-            },
             axisY: {
                 includeZero: true
             },
@@ -60,15 +37,12 @@ class IconCards extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-6">
-                        <CanvasJSChart options={one} />
-                    </div>
-                    <div className="col-lg-6">
-                        <CanvasJSChart options={two} />
-                    </div>
+                    <Card />
                 </div>
-                <div className="row">
-                    
+                <div className="row mt-5">
+                    <div className="col-lg-12 col-md-12">
+                        <CanvasJSChart options={option} />
+                    </div>
                 </div>
             </div>
         )

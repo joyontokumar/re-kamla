@@ -1,17 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import axios from 'axios';
 import Aux from '../../hoc/_Aux';
+import { createFaculty } from "../../api/faculty";
+// file export
+import Button from "../../button/Button";
+import Input from "../../input/Input";
 
-class AddFacultyForm extends Component {
-    render() {
-        return (
-            <Aux>
+const AddFacultyForm = () => {
+    const [name, setFacultyName] = useState('');
+    // submit faculty name
+    const submit = async (e) => {
+        e.preventDefault();
+        const faculty = createFaculty({ name })
+    }
+    return (
+        <Aux>
+            <form onSubmit={submit}>
                 <div className="form-group">
                     <label htmlFor="faculyname">Faculty Name</label>
-                    <input type="text" id="faculyname" className="form-control" />
+                    <Input type="text" id="faculyname" placeholder="Faculty Name" onChange={setFacultyName} />
                 </div>
-                <button type="submit" onClick={this.SendInfo} className="btn btn-primary">Add Faculty</button>
-            </Aux>
-        )
-    }
+                {/* <button type="submit" className="btn btn-primary">Add Faculty</button> */}
+                <Button type="submit" value="Add Faculty" />
+            </form>
+        </Aux>
+    )
+
 }
 export default AddFacultyForm
