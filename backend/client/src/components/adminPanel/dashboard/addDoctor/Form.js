@@ -52,7 +52,7 @@ const Form  = () =>{
                 <div className="form-group">
                     <label htmlFor="faculty">Select Faculty :</label>
                 </div>
-                <select name="faculty" id="faculty" className="form-control" onChange={(e) => Setfaculties(e.target.value)}>
+                <select multiple={false} name="faculty" id="faculty" className="form-control" onChange={(e) => Setfaculties(e.target.value)} value={faculty}>
                     {faculty && faculty.map((fac, index)=>(
                         <option value={`${fac._id}`} key={index}>{fac.name}</option>
                     ))}
