@@ -500,9 +500,16 @@ footer.sticky-footer {
     background: #ecf0f8;
 }
 
+
 /*==========================================================
     top menu author sidebar
 ============================================================*/
+
+.profile-image {
+    height: 70px;
+    width: 70px;
+    margin: auto;
+}
 
 .right-sidebar-author {
     position: absolute;
@@ -579,11 +586,13 @@ nav#mainNav {
     border-bottom: 1px solid #dddddd54;
 }
 
+
 /*================================================
     admin card content
 ===================================================*/
+
 .admin-card {
-    box-shadow: 0 7px 31px 4px rgba(0,0,0,.12);
+    box-shadow: 0 7px 31px 4px rgba(0, 0, 0, .12);
     margin-bottom: 40px;
     padding: 30px 20px;
     display: flex;
@@ -609,15 +618,19 @@ nav#mainNav {
     color: #26339f;
     line-height: 60px;
 }
-.card-color{
+
+.card-color {
     color: #26339f;
     font-weight: 700;
     line-height: 1;
     font-size: 15px;
 }
+
+
 /*==========================================================
     admin search box
 ============================================================*/
+
 .admin-search {
     position: absolute;
     left: 50%;
@@ -634,6 +647,7 @@ nav#mainNav {
     color: #3a3a3a;
     font-size: 15px;
 }
+
 .admin-search button {
     position: absolute;
     right: 0;

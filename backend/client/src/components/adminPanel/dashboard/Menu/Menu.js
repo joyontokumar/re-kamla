@@ -30,7 +30,7 @@ class Menu extends Component {
                                     <img class="img-sm rounded-circle" src={author} alt="profile image" />
                                 </div>
                                 <div class="profile-text-wrapper mt-2">
-                                    <p class="profile-name">Sweet Dream Girl</p>
+                                    <p class="profile-name">Invariant Telecom.</p>
                                     <p class="designation">Online <span class="dot-indicator bg-success"></span></p>
                                 </div>
                             </Link>
@@ -44,12 +44,15 @@ class Menu extends Component {
                             <NavLink exect className="nav-link" exact to="/dashboard/addfaculty"><i class="fas fa-align-justify"></i>
                                 <span className="nav-link-text">Add Faculty</span></NavLink>
                         </li>
+                        <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Add Faculty">
+                            <NavLink exect className="nav-link" exact to="/dashboard/allfaculty"><i class="fas fa-align-justify"></i>
+                                <span className="nav-link-text">All Faculty</span></NavLink>
+                        </li>
+
                         <li className="nav-item" data-toggle="tooltip" data-placement="right" title="Add Doctor">
                             <NavLink exect className="nav-link" exact to="/dashboard/adddoctor"><i class="fas fa-edit"></i>
                                 <span className="nav-link-text">Add Doctor</span></NavLink>
                         </li>
-
-
                     </ul>
                 </div>
             </nav>

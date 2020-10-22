@@ -26,6 +26,7 @@ import OnlineDetails from '../pages/OnlineDetails'
 import Dashboard from '../components/adminPanel/dashboard/panel/Dashboard'
 import AddComDoctor from '../components/adminPanel/dashboard/addDoctor/AddDoctor'
 import AddFaculty from '../components/adminPanel/dashboard/addFaculty/addFaculty'
+import AllFaculty from '../components/adminPanel/dashboard/addFaculty/allFaculty'
 
 const Routes = () => {
   return (
@@ -136,11 +137,15 @@ const Routes = () => {
             path={`${process.env.PUBLIC_URL}/dashboard/adddoctor`}
             component={AddComDoctor}
           />
-
           <Route
             exact
             path={`${process.env.PUBLIC_URL}/dashboard/addfaculty`}
             component={AddFaculty}
+          />
+          <Route
+            exact
+            path={`${process.env.PUBLIC_URL}/dashboard/allfaculty`}
+            component={AllFaculty}
           />
 
         </Switch>

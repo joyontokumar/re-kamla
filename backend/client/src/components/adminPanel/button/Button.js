@@ -3,7 +3,7 @@ const Button = ({ type, value }) => {
     return (
         <React.Fragment>
             <div className="form-group">
-                <input type={type} className="btn btn-primary" value={value} />
+                <input type={type} className="btn btn-primary mt-3" value={value} />
             </div>
         </React.Fragment>
     )

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-// import App from '../App'
 import App from '../../App';
-import AddFacultyForm from '../addFaculty/addFacultyForm';
+import ShowFaculty from '../addFaculty/showFaculty';
 import Footer from '../Footer/Footer'
 import { NavLink } from 'react-router-dom'
-class category extends Component {
+class AllFaculty extends Component {
     render() {
         return (
             <App>
@@ -17,17 +16,17 @@ class category extends Component {
                                         <li className="breadcrumb-item">
                                             <NavLink to="/dashboard">Dashboard</NavLink>
                                         </li>
-                                        <li className="breadcrumb-item active">Add Faculty</li>
+                                        <li className="breadcrumb-item active">All Faculty</li>
                                     </ol>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="add-category-content">
+                    <div className="show-content">
                         <div className="container-fluid">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <AddFacultyForm />
+                                    <ShowFaculty />
                                 </div>
                             </div>
                         </div>
@@ -39,4 +38,4 @@ class category extends Component {
     }
 }
 
-export default category
+export default AllFaculty

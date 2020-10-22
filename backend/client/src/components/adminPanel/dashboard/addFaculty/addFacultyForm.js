@@ -20,7 +20,6 @@ const AddFacultyForm = () => {
                     <label htmlFor="faculyname">Faculty Name</label>
                     <Input type="text" id="faculyname" placeholder="Faculty Name" onChange={setFacultyName} />
                 </div>
-                {/* <button type="submit" className="btn btn-primary">Add Faculty</button> */}
                 <Button type="submit" value="Add Faculty" />
             </form>
         </Aux>

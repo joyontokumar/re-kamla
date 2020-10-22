@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 
 const MainMenu = () => {
   const [scrolled, setScrolled] = React.useState(false)
+  const [faculties, setFaculties] = useState([]);
   const handleScroll = () => {
     const offset = window.scrollY
     if (offset > 200) {
@@ -12,10 +14,22 @@ const MainMenu = () => {
       setScrolled(false)
     }
   }
-
+  // get faculty category data from database
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await axios.get('http://localhost:5050/api/faculty');
+        setFaculties(data);
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, []);
+  // window scroll
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
   })
+
   let x = ['navbar navbar-expand-lg header-area no-padding navbar-light']
   if (scrolled) {
     x.push('scrolled')
@@ -54,10 +68,15 @@ const MainMenu = () => {
                 Doctor Profile <i className="fas fa-angle-down"></i>
               </Link>
               <ul className="dropdown">
-                <li>
-                  <Link to="/mental-health">Mental Health </Link>
-                </li>
-                <li>
+                {faculties && faculties.map((faculty, index)=>(
+
+                  <li key={index}>
+                    <Link to="/mental-health">{faculty.name}</Link>
+                  </li>
+
+                ))}
+
+                {/* <li>
                   <Link to="/speech-language-therapy">
                     Speech & Language Therapy
                   </Link>
@@ -75,7 +94,7 @@ const MainMenu = () => {
                 </li>
                 <li>
                   <Link to="/teams">Team Member</Link>
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
